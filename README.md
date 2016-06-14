@@ -1,11 +1,60 @@
+# profondo: A non-SMuFL Bravura font clone package for lilypond
+
+<p align="center">
+  <a href="./example.png">
+  <img
+    src="https://raw.githubusercontent.com/lyp-packages/profondo/master/example.png">
+  </a>
+</p>
+
+This package provides the Profondo open-source font for lilypond.
+
+The code here is based on code by [Abraham Lee](https://github.com/tisimst), currently residing in [OpenLilypondFonts](https://github.com/OpenLilypondFonts), repackaged for usage as a lyp package@.
+
+## Installation
+
+Install using [lyp](https://github.com/noteflakes/lyp):
+
+```bash
+$ lyp install profondo
+```
+
+## Usage
+
+```lilypond
+\require "profondo"
+
+% Use profondo font and apply associated stylesheet
+\useProfondoStyleSheet
+
+% To use font only:
+
+#(set-global-staff-size 16)  % this MUST go PRIOR to defining the fonts!!!
+
+\paper {
+  #(define fonts
+    (set-global-fonts
+      #:music "profondo"
+      #:brace "profondo"
+      #:factor (/ staff-height pt 20)
+  ))
+}
+
+```
+
+Also see the included [example](./example.ly).
+
+## Compatibility with Lilypond versions
+
+This font is known to work in Lilypond version 2.18.2 or later.
+
 FONTLOG for the Profondo font
-=============================
+-----------------------------
 
 This file provides detailed information on the Profondo Font Software. This information should
 be distributed along with the Profondo fonts and any derivative works. It is an un-modified
 glyph re-mapping of Steinberg's Bravura font (also distributed under the OFL) to be compatible
 with the LilyPond music engraving software.
-
 
 Basic font information
 ----------------------
@@ -25,14 +74,12 @@ More information about SMuFL can be found at:
 
 http://www.smufl.org/
 
-
 Note for developers
 -------------------
 
 If you are intending to use Bravura as part of your own software application, please refer to
 the 'Notes for implementers' section in the SMuFL specification for useful information about
 Bravura's metrics and how glyphs are registered.
-
 
 Changelog
 ---------
