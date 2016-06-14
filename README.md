@@ -1,7 +1,7 @@
 # profondo: A non-SMuFL Bravura font clone package for lilypond
 
 <p align="center">
-  <a href="./example.png">
+  <a href="./example.ly">
   <img
     src="https://raw.githubusercontent.com/lyp-packages/profondo/master/example.png">
   </a>
@@ -28,9 +28,7 @@ $ lyp install profondo
 \useProfondoStyleSheet
 
 % To use font only:
-
 #(set-global-staff-size 16)  % this MUST go PRIOR to defining the fonts!!!
-
 \paper {
   #(define fonts
     (set-global-fonts
@@ -39,7 +37,6 @@ $ lyp install profondo
       #:factor (/ staff-height pt 20)
   ))
 }
-
 ```
 
 Also see the included [example](./example.ly).

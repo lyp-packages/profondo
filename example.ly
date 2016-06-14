@@ -1,3 +1,6 @@
+% Example code by Abraham Lee:
+%   https://sites.google.com/site/tisimst/Home/custom-font-how-to
+
 \version "2.18.2"
 
 \pinclude "./package.ly"
